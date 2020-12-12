@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+        <title>Arduino</title>
+
+        <!--Boostrap CDN-->
+        <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+        crossorigin="anonymous">
+
+        <!--font awesome cdn-->
+        <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="project.css">
+
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-sm-12 col-12">
+                  </div> 
+                  <div class="col-md-4 col-12 text-center">
+                      <h2 class="my-md-3 site-title text-white">Arduino Projects</h2>
+                  </div>           
+                  <div class="col-md-4 col-12 text-right">
+                      <p class="my-md-4 header-links">
+                          <a href="http://127.0.0.1:5500/sign%20in.html" class="px-2">Sign in</a>
+                      </p>
+                  </div>
+                </div>
+            </div>
+
+            <!-- <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="http://127.0.0.1:5500/home.html">HOME  <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="http://127.0.0.1:5500/best%20game.html">BEST GAME</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="http://127.0.0.1:5500/colloection.html">COLLOECTION</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:5500/about%20us.html">ABOUT US</a>
+                        </li>
+                         
+                      </ul>
+                    </div>
+                  </nav>
+            </div> -->
+        </header>
+
+<div class="row">
+  <div class="left" style="background-color:#FFFFFF">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <br>
+    <ul id="myMenu">
+      <li><a href="http://127.0.0.1:5500/projects/project1.html"><h2><img class="imgmenu" src="images/project1.png">Obstacle Avoiding Car</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project2.html"><h2><img class="imgmenu" src="images/project2.png">Floor Cleaning car</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project3.html"><h2><img class="imgmenu" src="images/project3.png">bluetooth controlled car</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project4.html"><h2><img class="imgmenu" src="images/project4.png">all in one arduino car</h2></a></li> 
+      <li><a href="http://127.0.0.1:5500/projects/project5.html"><h2><img class="imgmenu" src="images/project5.png">Wire cutting</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project6.html"><h2><img class="imgmenu" src="images/project6.png">sanitizer dispenser</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project7.html"><h2><img class="imgmenu" src="images/project7.png">Fingerprint Lock</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project8.html"><h2><img class="imgmenu" src="images/project8.png">Gesture Control Robotic Hand</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project9.html"><h2><img class="imgmenu" src="images/project9.png">Radar with Arduino</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project10.html"><h2><img class="imgmenu" src="images/project10.png">3D Printer</h2></a></li>
+      <li><a href="http://127.0.0.1:5500/projects/project11.html"><h2><img class="imgmenu" src="images/project11.png">homework writing machine</h2></a></li>
+    </ul>
+  </div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+</script>
+
+</body>
+</html>

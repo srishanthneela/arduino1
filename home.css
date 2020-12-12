@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato&family=Roboto:ital@1&family=Sofia&display=swap');
+
+:root{
+--light-gray:#2b3032a1;
+--primary-color:#45ccb8;
+--border:#2b303218;
+--text-color:#ff686b;
+--roboto:"Roboto",sans-serif;
+--gugi:"Gugi",cursive;
+--sofia:"Sofia",cursive;
+}
+
+.primary-color{
+    color:var(--primary-color);
+}
+
+.bg-primary-color{
+    color: var(--primary-color)!important;
+}
+
+.text-color{
+    color: var(--text-color);
+}
+
+font-roboto{
+    font-family: var(--roboto);
+}
+
+
+.lightblue{
+    color:lightblue ;
+}
+
+.logo{
+    margin-left: 35%;
+    margin-top: 10%;
+    width: 600px;
+}
+
+.next{
+    background-color: white;
+    color: black;
+    width: 150px;
+    height: 50px;
+    margin-left: 48%;
+    font-size: 30px;
+}
